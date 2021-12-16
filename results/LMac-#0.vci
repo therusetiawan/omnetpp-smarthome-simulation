@@ -1,0 +1,162 @@
+file 43008 1639611684                                           
+version 2
+run LMac-0-20211216-06:40:12-27396
+attr configname LMac
+attr datetime 20211216-06:40:12
+attr experiment LMac
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network MiniSmartHome
+attr processid 27396
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.wlan[*].mac.typename "\"LMac\""
+param **.mac.slotDuration 50ms
+param **.mac.numSlots 8
+param **.mac.reservedMobileSlots 0
+param **.wlan[*].typename "\"WirelessInterface\""
+param **.wlan[*].radio.typename "\"ApskScalarRadio\""
+param **.arp.typename "\"GlobalArp\""
+param *.gateway.forwarding true
+param **.maxTransmissionDuration 100ms
+param *.configurator.addStaticRoutes false
+param *.configurator.config "xmldoc(\"config.xml\")"
+param **.radio.centerFrequency 2.45GHz
+param **.radio.bandwidth 2.8MHz
+param **.radio.transmitter.bitrate "19200 bps"
+param **.radio.transmitter.headerLength 8b
+param **.radio.transmitter.preambleDuration 0.0001s
+param **.radio.transmitter.power 2.24mW
+param **.radio.receiver.energyDetection -90dBm
+param **.radio.receiver.sensitivity -100dBm
+param **.radio.receiver.snirThreshold -8dB
+param *.radioMedium.backgroundNoise.power -110dBm
+param **.mac.headerLength 8b
+param *.sensor*.numApps 1
+param *.sensor*.app[0].typename "\"UdpBasicApp\""
+param *.sensor*.app[0].destAddresses "\"server\""
+param *.sensor*.app[0].destPort 1000
+param *.sensor*.app[0].sendInterval 1s
+param *.sensor*.app[0].startTime exponential(1s)
+param *.sensor*.app[0].messageLength 10Byte
+param *.server.numApps 1
+param *.server.app[0].typename "\"UdpSink\""
+param *.server.app[0].localPort 1000
+param *.visualizer.*.routingTableVisualizer.displayRoutesIndividually false
+param *.visualizer.*.routingTableVisualizer.lineShift 0
+param *.visualizer.*.routingTableVisualizer.displayLabels false
+param *.visualizer.*.infoVisualizer.modules "\"*.server.app[0]\""
+param *.visualizer.*.networkRouteVisualizer.displayRoutes true
+param *.visualizer.*.physicalLinkVisualizer.displayLinks true
+
+vector 0 MiniSmartHome.sensor1.energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 1 MiniSmartHome.sensor2.energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 2 MiniSmartHome.gateway.energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 3 MiniSmartHome.sensor1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 4 MiniSmartHome.sensor1.wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 5 MiniSmartHome.sensor2.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 MiniSmartHome.sensor2.wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 7 MiniSmartHome.gateway.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 MiniSmartHome.gateway.wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 9 MiniSmartHome.sensor1.energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 10 MiniSmartHome.sensor1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 11 MiniSmartHome.sensor2.energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 12 MiniSmartHome.sensor2.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 13 MiniSmartHome.gateway.energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 14 MiniSmartHome.gateway.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 15 MiniSmartHome.sensor1.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 16 MiniSmartHome.sensor2.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 17 MiniSmartHome.gateway.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+0	5399 3813 0 395 0 0.198060815073 153 0 0.075 1.060183 0.061550000723
+1	9212 3818 0 394 0 0.198060131267 153 0 0.075 1.055188 0.061525000748
+2	13030 3750 0 396 0 0.198060946502 150 0 0.075 1.025188 0.058375000748
+3	16780 890 0 389 0 0.196666666652 41 0 3 68 138
+4	17670 3805 0 395 0 0.198060815073 152 0 0.075 1.060183 0.061550000723
+5	21475 891 0 392 0 0.198060131267 41 0 3 68 138
+6	22366 3810 0 394 0 0.198060131267 152 0 0.075 1.055188 0.061525000748
+7	26176 869 0 391 0 0.196666666652 40 0 3 65 129
+8	27045 3742 0 396 0 0.198060946502 149 0 0.075 1.025188 0.058375000748
+9	30787 2027 7 395 0.05 0.198060815073 50 -0.001283063170338 0 -0.032717601636143 2.8622635784903e-05
+10	32814 1268 7 395 0.05 0.198060815073 54 0 3 60 126
+11	34082 2085 8 392 0.05 0.198060131267 50 -0.001249313164086 0 -0.03211010154407 2.7802139623636e-05
+12	36167 1317 8 392 0.05 0.198060131267 56 0 3 61 127
+13	37484 2085 9 396 0.05 0.198060946502 50 -0.0012493131779983 0 -0.031603851862638 2.7169697314075e-05
+14	39569 1320 9 396 0.05 0.198060946502 56 0 3 64 136
+15	40889 570 28 383 0.060640636179 0.196225994374 24 0 2 24 36
+16	41459 524 41 394 0.064062645349 0.198060131267 22 0 2 23 35
+17	41983 476 54 338 0.067162557674 0.175337974643 20 0 2 20 30
+vector 18 MiniSmartHome.sensor1.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 19 MiniSmartHome.sensor2.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 20 MiniSmartHome.server.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+18	42896 37 396 396 0.1 0.198722254556 2 0 0 0 0
+19	42933 37 396 396 0.1 0.198722254556 2 0 0 0 0
+20	42970 37 396 396 0.1 0.198722254556 2 0 0 0 0
+
